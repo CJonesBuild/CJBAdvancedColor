@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+<UICollectionViewDelegate, UICollectionViewDataSource>
 
+@property (nonatomic, weak) IBOutlet UILabel *lblMain;
+@property (nonatomic, weak) IBOutlet UILabel *lblSubtitle;
+@property (nonatomic, weak) IBOutlet UILabel *lblInverted;
+
+@property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 
 @end
 

@@ -44,7 +44,7 @@
 
 @interface UIColor (UIColor)
 
-// CJB Advanced color palette
+// CJB Custom color palette
 + (UIColor *)bloodColor;
 + (UIColor *)canaryColor;
 + (UIColor *)goldColor;
@@ -85,6 +85,10 @@
 
 + (UIColor *)colorFromHex:(NSString *)hexString alpha:(float)alphaValue;
 + (UIImage *)imageFromColor:(UIColor *)color;
+- (UIColor *)invertColor;
+- (UIColor *)complementaryColor;
+- (UIColor *)readableComplementaryColor;
+
 
 @end
 

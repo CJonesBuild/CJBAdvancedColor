@@ -82,28 +82,28 @@
 	return [self colorFromHex:@"1abc9c" alpha:1.0f];
 }
 + (UIColor *)flatui_emerlandColor {
-	return [self colorFromHex:@"#2ecc71" alpha:1.0f];
+	return [self colorFromHex:@"2ecc71" alpha:1.0f];
 }
 + (UIColor *)flatui_peterriverColor {
-	return [self colorFromHex:@"#3498db" alpha:1.0f];
+	return [self colorFromHex:@"3498db" alpha:1.0f];
 }
 + (UIColor *)flatui_amethystColor {
-	return [self colorFromHex:@"#9b59b6" alpha:1.0f];
+	return [self colorFromHex:@"9b59b6" alpha:1.0f];
 }
 + (UIColor *)flatui_wetasphaultColor {
-	return [self colorFromHex:@"#34495e" alpha:1.0f];
+	return [self colorFromHex:@"34495e" alpha:1.0f];
 }
 + (UIColor *)flatui_greenseaColor {
-	return [self colorFromHex:@"#16a085" alpha:1.0f];
+	return [self colorFromHex:@"16a085" alpha:1.0f];
 }
 + (UIColor *)flatui_nephritisColor {
-	return [self colorFromHex:@"#27ae60" alpha:1.0f];
+	return [self colorFromHex:@"27ae60" alpha:1.0f];
 }
 + (UIColor *)flatui_belizeholeColor {
-	return [self colorFromHex:@"#2980b9" alpha:1.0f];
+	return [self colorFromHex:@"2980b9" alpha:1.0f];
 }
 + (UIColor *)flatui_wisteriaColor {
-	return [self colorFromHex:@"#8e44ad" alpha:1.0f];
+	return [self colorFromHex:@"8e44ad" alpha:1.0f];
 }
 + (UIColor *)flatui_midnightblueColor {
 	return [self colorFromHex:@"2c3e50" alpha:1.0f];
@@ -183,4 +183,67 @@
 	return image;
 }
 
+/**
+ * Creates a directly inverted UIColor.
+ *
+ * @note This method mathmaticially inverts the color.
+ *
+ * @return A UIColor object that is mathmaticially inverted.
+ * @see complementaryColorFromColor:
+ */
+- (UIColor *)invertColor {
+	double r;
+	double g;
+	double b;
+	double a;
+	[self getRed:&r green:&g blue:&b alpha:&a];
+	return [UIColor colorWithRed:1.-r green:1.f-g blue:1.f-b alpha:a];
+}
+
+/**
+ * Creates a mathmaticially complementary color.
+ *
+ * @note This method creates a mathmaticially complementary color.
+ *
+ * @return A UIColor object that is mathmaticially complementary.
+ * @see readableComplementaryColorFromColor:
+ */
+- (UIColor *)complementaryColor {
+	double h;
+	double s;
+	double b;
+	double a;
+	[self getHue:&h saturation:&s brightness:&b alpha:&a];
+	h = h+0.5;
+	if (h>1.0) {
+		h=h-1;
+	}
+	return [UIColor colorWithHue:h saturation:s-0.1 brightness:b alpha:a];
+}
+
+/**
+ * Creates a mathmaticially complementary UIColor with some processing to the output color to make it more visually readable.
+ *
+ * @note This method creates a mathmaticially complementary color with emphasis on being used near the origional color.
+ *
+ * @return A UIColor object that is mathmaticially complementary and more readable.
+ * @see complementaryColorFromColor:
+ */
+- (UIColor *)readableComplementaryColor {
+	double h;
+	double s;
+	double b;
+	double a;
+	[self getHue:&h saturation:&s brightness:&b alpha:&a];
+	h = h+0.5;
+	if (h>1.0) {
+		h=h-1;
+	}
+	if (b<=0.5) {
+		b=b+0.24;
+	} else if (b>0.5) {
+		b=b-0.12;
+	}
+	return [UIColor colorWithHue:h saturation:s-0.1 brightness:b alpha:a];
+}
 @end

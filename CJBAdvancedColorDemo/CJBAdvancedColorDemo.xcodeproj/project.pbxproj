@@ -16,6 +16,7 @@
 		645806401DAC0EBD00866478 /* CJBAdvancedColorDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458063F1DAC0EBD00866478 /* CJBAdvancedColorDemoTests.m */; };
 		6458064B1DAC0EBD00866478 /* CJBAdvancedColorDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458064A1DAC0EBD00866478 /* CJBAdvancedColorDemoUITests.m */; };
 		6458065B1DAC100200866478 /* UIColor+CJBAdvancedColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458065A1DAC100200866478 /* UIColor+CJBAdvancedColor.m */; };
+		64AE0BB51DAE3576007CE0E0 /* SupplimentryCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AE0BB41DAE3576007CE0E0 /* SupplimentryCollectionReusableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		6458064C1DAC0EBD00866478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		645806591DAC100200866478 /* UIColor+CJBAdvancedColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+CJBAdvancedColor.h"; path = "CJBAdvancedColor/UIColor+CJBAdvancedColor.h"; sourceTree = "<group>"; };
 		6458065A1DAC100200866478 /* UIColor+CJBAdvancedColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CJBAdvancedColor.m"; path = "CJBAdvancedColor/UIColor+CJBAdvancedColor.m"; sourceTree = "<group>"; };
+		64AE0BB31DAE3576007CE0E0 /* SupplimentryCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplimentryCollectionReusableView.h; sourceTree = "<group>"; };
+		64AE0BB41DAE3576007CE0E0 /* SupplimentryCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupplimentryCollectionReusableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +112,9 @@
 				645806291DAC0EBD00866478 /* AppDelegate.m */,
 				6458062B1DAC0EBD00866478 /* ViewController.h */,
 				6458062C1DAC0EBD00866478 /* ViewController.m */,
-				6458062E1DAC0EBD00866478 /* Main.storyboard */,
-				645806311DAC0EBD00866478 /* Assets.xcassets */,
-				645806331DAC0EBD00866478 /* LaunchScreen.storyboard */,
-				645806361DAC0EBD00866478 /* Info.plist */,
+				64AE0BB31DAE3576007CE0E0 /* SupplimentryCollectionReusableView.h */,
+				64AE0BB41DAE3576007CE0E0 /* SupplimentryCollectionReusableView.m */,
+				64AE0BB21DAE2FDD007CE0E0 /* Storyboards */,
 				645806251DAC0EBD00866478 /* Supporting Files */,
 			);
 			path = CJBAdvancedColorDemo;
@@ -121,6 +123,8 @@
 		645806251DAC0EBD00866478 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				645806311DAC0EBD00866478 /* Assets.xcassets */,
+				645806361DAC0EBD00866478 /* Info.plist */,
 				645806261DAC0EBD00866478 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -151,6 +155,15 @@
 				6458065A1DAC100200866478 /* UIColor+CJBAdvancedColor.m */,
 			);
 			name = CJBAdvancedColor;
+			sourceTree = "<group>";
+		};
+		64AE0BB21DAE2FDD007CE0E0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6458062E1DAC0EBD00866478 /* Main.storyboard */,
+				645806331DAC0EBD00866478 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +233,6 @@
 				TargetAttributes = {
 					645806211DAC0EBD00866478 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = W29MQ7AKY8;
 						ProvisioningStyle = Automatic;
 					};
 					6458063A1DAC0EBD00866478 = {
@@ -289,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64AE0BB51DAE3576007CE0E0 /* SupplimentryCollectionReusableView.m in Sources */,
 				6458062D1DAC0EBD00866478 /* ViewController.m in Sources */,
 				6458065B1DAC100200866478 /* UIColor+CJBAdvancedColor.m in Sources */,
 				6458062A1DAC0EBD00866478 /* AppDelegate.m in Sources */,
@@ -441,7 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W29MQ7AKY8;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CJBAdvancedColorDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjonesbuild.CJBAdvancedColorDemo;
@@ -453,7 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W29MQ7AKY8;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CJBAdvancedColorDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjonesbuild.CJBAdvancedColorDemo;
@@ -530,6 +543,7 @@
 				645806511DAC0EBD00866478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		645806521DAC0EBD00866478 /* Build configuration list for PBXNativeTarget "CJBAdvancedColorDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +552,7 @@
 				645806541DAC0EBD00866478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		645806551DAC0EBD00866478 /* Build configuration list for PBXNativeTarget "CJBAdvancedColorDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +561,7 @@
 				645806571DAC0EBD00866478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
