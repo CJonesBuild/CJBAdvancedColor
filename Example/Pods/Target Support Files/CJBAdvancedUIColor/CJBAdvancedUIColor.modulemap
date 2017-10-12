@@ -1,0 +1,6 @@
+framework module CJBAdvancedUIColor {
+  umbrella header "CJBAdvancedUIColor-umbrella.h"
+
+  export *
+  module * { export * }
+}

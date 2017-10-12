@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CJBAdvancedUIColor_Example' do
+  pod 'CJBAdvancedUIColor', :path => '../'
+
+  target 'CJBAdvancedUIColor_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

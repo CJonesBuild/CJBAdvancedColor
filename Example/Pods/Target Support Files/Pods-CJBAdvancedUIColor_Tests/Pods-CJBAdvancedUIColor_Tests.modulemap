@@ -1,0 +1,6 @@
+framework module Pods_CJBAdvancedUIColor_Tests {
+  umbrella header "Pods-CJBAdvancedUIColor_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
