@@ -1,6 +1,5 @@
 # CJBAdvancedUIColor
 
-[![CI Status](http://img.shields.io/travis/chris@jonsium.com/CJBAdvancedUIColor.svg?style=flat)](https://travis-ci.org/chris@jonsium.com/CJBAdvancedUIColor)
 [![Version](https://img.shields.io/cocoapods/v/CJBAdvancedUIColor.svg?style=flat)](http://cocoapods.org/pods/CJBAdvancedUIColor)
 [![License](https://img.shields.io/cocoapods/l/CJBAdvancedUIColor.svg?style=flat)](http://cocoapods.org/pods/CJBAdvancedUIColor)
 [![Platform](https://img.shields.io/cocoapods/p/CJBAdvancedUIColor.svg?style=flat)](http://cocoapods.org/pods/CJBAdvancedUIColor)
