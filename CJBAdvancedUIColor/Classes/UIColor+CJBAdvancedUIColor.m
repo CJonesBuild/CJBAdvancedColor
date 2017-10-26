@@ -162,28 +162,6 @@
 }
 
 /**
- * Creates a 1px image based on the UIColor.
- *
- * @note This method creates a 1px image based on UIColor that can be used with [UIButton setBackgroundImage: forState:] to allow simple color to be used on custom buttons (such as UIControlStateNormal, UIControlStateHighlighted, UIControlStateSelected).
- *
- * @param color the UIColor object to be used to fill the image.
- * @return A UIImage object filled with the UIColor specified.
- */
-+ (UIImage *)imageFromColor:(UIColor *)color {
-	CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
-	UIGraphicsBeginImageContext(rect.size);
-	CGContextRef context = UIGraphicsGetCurrentContext();
-
-	CGContextSetFillColorWithColor(context, [color CGColor]);
-	CGContextFillRect(context, rect);
-
-	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
-
-	return image;
-}
-
-/**
  * Creates a directly inverted UIColor.
  *
  * @note This method mathmaticially inverts the color.

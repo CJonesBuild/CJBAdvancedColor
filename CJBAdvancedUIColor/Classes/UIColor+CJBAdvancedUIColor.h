@@ -84,7 +84,6 @@
 
 
 + (UIColor *)colorFromHex:(NSString *)hexString alpha:(float)alphaValue;
-+ (UIImage *)imageFromColor:(UIColor *)color;
 - (UIColor *)invertColor;
 - (UIColor *)complementaryColor;
 - (UIColor *)readableComplementaryColor;
