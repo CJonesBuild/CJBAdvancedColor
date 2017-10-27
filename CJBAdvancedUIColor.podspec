@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CJBAdvancedUIColor'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'CJBAdvancedUIColor is a lightweight UIColor extension that allows native translation of web style HEX color codes into UIColor objects.'
 
 # This description is used to generate tags and improve search results.
