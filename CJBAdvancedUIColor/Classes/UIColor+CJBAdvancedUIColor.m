@@ -152,11 +152,12 @@
 + (UIColor *)colorFromHex:(NSString *)hexString alpha:(float)alphaValue {
 	unsigned rgbValue = 0;
 	unsigned startingLocation = 0;
+	
 	if ([[hexString substringToIndex:1] isEqualToString:@"#"]) {
-		startingLocation = 1;
+		startingLocation = 1; //bypass optional # character
 	}
 	NSScanner *scanner = [NSScanner scannerWithString:[[NSString stringWithString:hexString] uppercaseString]];
-	[scanner setScanLocation:startingLocation]; // bypass '#' character if used
+	[scanner setScanLocation:startingLocation];
 	[scanner scanHexInt:&rgbValue];
 	return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:alphaValue];
 }
